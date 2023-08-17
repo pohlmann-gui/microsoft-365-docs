@@ -135,10 +135,10 @@ $tenantId = '' ### Paste your tenant ID here
 $appId = '' ### Paste your Application ID here
 $appSecret = '' ### Paste your Application key here
 
-$sourceAppIdUri = 'https://api.securitycenter.microsoft.com/.default'
+$sourceAppIdUri = 'https://api.securitycenter.microsoft.com'
 $oAuthUri = "https://login.microsoftonline.com/$TenantId/oauth2/token"
 $authBody = [Ordered] @{
-    source = "$sourceAppIdUri"
+    resource = "$sourceAppIdUri"
     client_id = "$appId"
     client_secret = "$appSecret"
     grant_type = 'client_credentials'
